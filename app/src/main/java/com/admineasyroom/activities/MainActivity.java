@@ -14,8 +14,6 @@ import com.google.firebase.database.DatabaseReference;
 
 
 public class MainActivity extends AppCompatActivity {
-    DatabaseReference databaseReference;
-    Dialog lodingbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,FeedBackActivity.class));
             }
         });
-
     }
 }
 

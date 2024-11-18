@@ -61,10 +61,10 @@ public class FeedBackActivity extends AppCompatActivity {
                     if (model!=null){
                         list.add(model);
                     }
-                    FeedbackAdapter adapter = new FeedbackAdapter(FeedBackActivity.this,list);
-                    recyclerView.setAdapter(adapter);
-                    lodingbar.dismiss();
                 }
+                FeedbackAdapter adapter = new FeedbackAdapter(FeedBackActivity.this,list);
+                recyclerView.setAdapter(adapter);
+                lodingbar.dismiss();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
