@@ -4,10 +4,9 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.icu.lang.UCharacter;
-
 import com.admineasyroom.R;
-
 import java.util.Objects;
+
 
 public class DialogUtils {
    public static Dialog showProgressBar(Context context){

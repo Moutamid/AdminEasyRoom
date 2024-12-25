@@ -63,8 +63,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.MainViewHold
                 !data.last_name.isEmpty() &&
                 !data.phone_number.isEmpty() &&
                 !data.dob.isEmpty() &&
-                !data.email.isEmpty() &&
-                !data.user_type.isEmpty()
+                !data.email.isEmpty()
+//                !data.user_type.isEmpty()
         ) {
             Glide.with(context).load(R.drawable.person).into(holder.personImage);
             holder.nameTv.setText(data.first_name+" "+data.last_name);

@@ -59,9 +59,11 @@ public class AllUsersActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userModelList.clear();
                 for(DataSnapshot childSnapshot : snapshot.getChildren()){
-                    UserModel model=childSnapshot.getValue(UserModel.class);
-                    if (model!=null){
-                        userModelList.add(model);
+                    if(childSnapshot.hasChild("first_name")) {
+                        UserModel model = childSnapshot.getValue(UserModel.class);
+                        if (model != null) {
+                            userModelList.add(model);
+                        }
                     }
                 }
                 UsersAdapter adapter = new UsersAdapter(AllUsersActivity.this,userModelList);
